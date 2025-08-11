@@ -1,7 +1,6 @@
 package com.um.tp5.domain;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.*;
 import lombok.*;
 
 import java.math.BigDecimal;
