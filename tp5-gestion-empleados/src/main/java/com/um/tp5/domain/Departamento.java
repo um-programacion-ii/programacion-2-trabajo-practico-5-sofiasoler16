@@ -4,6 +4,9 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "departamentos")
 @Data
@@ -20,6 +23,7 @@ public class Departamento {
     @Column(length = 500)
     private String descripcion;
 
-    //Falta lista empleados, cuando cree las relaciones
+    @OneToMany(mappedBy = "departamento", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Empleado> empleados = new ArrayList<>();
 
 }
