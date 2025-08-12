@@ -5,6 +5,8 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.time.LocalDate;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @Table(name = "proyectos")
@@ -30,4 +32,6 @@ public class Proyecto {
     @Temporal(TemporalType.DATE)
     private LocalDate fechaFin;
 
+    @ManyToMany(mappedBy = "proyectos")
+    private Set<Empleado> empleados = new HashSet<>();
 }
