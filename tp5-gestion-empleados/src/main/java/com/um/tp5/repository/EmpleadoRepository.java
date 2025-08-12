@@ -20,5 +20,5 @@ public interface EmpleadoRepository extends JpaRepository<Empleado, Long> {
     List<Empleado> findBySalarioBetween(BigDecimal salarioMin, BigDecimal salarioMax);
 
     List<Empleado> findByFechaContratacionAfter(LocalDate fecha);
-    
+
 }
