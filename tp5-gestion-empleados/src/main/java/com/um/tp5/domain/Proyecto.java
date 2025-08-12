@@ -25,7 +25,6 @@ public class Proyecto {
     private String descripcion;
 
     @Column(name = "fecha_inicio")
-    @Temporal(TemporalType.DATE)
     private LocalDate fechaInicio;
 
     @Column(name = "fecha_fin")

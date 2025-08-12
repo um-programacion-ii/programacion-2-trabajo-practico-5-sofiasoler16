@@ -32,11 +32,14 @@ public class Empleado {
     private String email;
 
     @Column(name = "fecha_contratacion", nullable = false)
-    @Temporal(TemporalType.DATE)
     private LocalDate fechaContratacion;
 
     @Column(nullable = false, precision = 10, scale = 2)
     private BigDecimal salario;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "departamento_id")
+    private Departamento departamento;
 
     @ManyToMany
     @JoinTable(
