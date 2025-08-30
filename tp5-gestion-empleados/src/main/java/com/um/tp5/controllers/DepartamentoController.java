@@ -17,4 +17,32 @@ public class DepartamentoController {
     public DepartamentoController(DepartamentoService s) {
         this.departamentoService = s;
     }
+
+
+    @GetMapping
+    public List<Departamento> obtenerTodos() {
+        return departamentoService.obtenerTodos();
+    }
+
+    @GetMapping("/{id}")
+    public Departamento obtenerPorId(@PathVariable Long id) {
+        return departamentoService.buscarPorId(id);
+    }
+
+    @GetMapping("/nombre/{nombre}")
+    public Departamento obtenerPorNombre(@PathVariable String nombre) {
+        return departamentoService.buscarPorNombre(nombre);
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.CREATED)
+    public Departamento crear(@Valid @RequestBody Departamento d) {
+        return departamentoService.guardar(d);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void eliminar(@PathVariable Long id) {
+        departamentoService.eliminar(id);
+    }
 }
