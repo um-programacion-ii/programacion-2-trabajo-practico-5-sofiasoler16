@@ -1,4 +1,7 @@
 
+server:
+  port: 8081
+
 spring:
   profiles:
     active: dev
@@ -57,3 +60,5 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+
