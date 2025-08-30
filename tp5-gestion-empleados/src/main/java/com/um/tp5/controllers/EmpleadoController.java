@@ -20,5 +20,5 @@ public class EmpleadoController {
     public EmpleadoController(EmpleadoService empleadoService) {
         this.empleadoService = empleadoService;
     }
-    
+
 }
