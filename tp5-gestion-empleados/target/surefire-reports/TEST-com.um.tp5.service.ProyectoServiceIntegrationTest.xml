@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.226" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.um.tp5.service.ProyectoServiceIntegrationTest" time="0.05" tests="4" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -61,18 +61,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="cuandoBuscarPorSalarioBetween_entoncesRetornaEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.039">
-    <system-out><![CDATA[2025-08-31T16:47:04.222-03:00  INFO 25163 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.um.tp5.service.EmpleadoServiceIntegrationTest]: EmpleadoServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-08-31T16:47:04.228-03:00  INFO 25163 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.um.tp5.Tp5EmpleadosApplication for test class com.um.tp5.service.EmpleadoServiceIntegrationTest
+  <testcase name="actualizar_ok_service" classname="com.um.tp5.service.ProyectoServiceIntegrationTest" time="0.011">
+    <system-out><![CDATA[2025-08-31T16:47:04.448-03:00  INFO 25163 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.um.tp5.service.ProyectoServiceIntegrationTest]: ProyectoServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-31T16:47:04.453-03:00  INFO 25163 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.um.tp5.Tp5EmpleadosApplication for test class com.um.tp5.service.ProyectoServiceIntegrationTest
 ]]></system-out>
   </testcase>
-  <testcase name="obtenerTodosLosEmpleados" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.033"/>
-  <testcase name="cuandoBuscarPorEmailExistente_entoncesRetornaEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.017"/>
-  <testcase name="actualizarEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.034"/>
-  <testcase name="buscarPorDepartamento_ok_service" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.034"/>
-  <testcase name="buscarPorId_noExiste_lanzaExcepcion" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.007"/>
-  <testcase name="eliminar_ok" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.012"/>
-  <testcase name="guardarCorrectamenteEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.009"/>
-  <testcase name="buscarPorId_ok_service" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.007"/>
-  <testcase name="cuandoGuardarEmpleado_entoncesSePersisteCorrectamente" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.009"/>
+  <testcase name="eliminar_ok_service" classname="com.um.tp5.service.ProyectoServiceIntegrationTest" time="0.009"/>
+  <testcase name="obtenerActivos_deberiaRetornarSoloActivos" classname="com.um.tp5.service.ProyectoServiceIntegrationTest" time="0.011"/>
+  <testcase name="cuandoBuscarProyectosActivos_retornarProyecto" classname="com.um.tp5.service.ProyectoServiceIntegrationTest" time="0.006"/>
 </testsuite>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.226" tests="10" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="2.952" tests="7" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -61,18 +61,52 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="cuandoBuscarPorSalarioBetween_entoncesRetornaEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.039">
-    <system-out><![CDATA[2025-08-31T16:47:04.222-03:00  INFO 25163 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.um.tp5.service.EmpleadoServiceIntegrationTest]: EmpleadoServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-2025-08-31T16:47:04.228-03:00  INFO 25163 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.um.tp5.Tp5EmpleadosApplication for test class com.um.tp5.service.EmpleadoServiceIntegrationTest
+  <testcase name="NoNombreUnicoExcepcion" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.099">
+    <system-out><![CDATA[2025-08-31T16:47:01.267-03:00  INFO 25163 --- [           main] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [com.um.tp5.service.DepartamentoServiceIntegrationTest]: DepartamentoServiceIntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-08-31T16:47:01.282-03:00  INFO 25163 --- [           main] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration com.um.tp5.Tp5EmpleadosApplication for test class com.um.tp5.service.DepartamentoServiceIntegrationTest
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.5.4)
+
+2025-08-31T16:47:01.315-03:00  INFO 25163 --- [           main] u.t.s.DepartamentoServiceIntegrationTest : Starting DepartamentoServiceIntegrationTest using Java 21.0.2 with PID 25163 (started by sofia in /home/sofia/Documentos/programacion2/programacion-2-trabajo-practico-5-sofiasoler16/tp5-gestion-empleados)
+2025-08-31T16:47:01.315-03:00  INFO 25163 --- [           main] u.t.s.DepartamentoServiceIntegrationTest : The following 1 profile is active: "test"
+2025-08-31T16:47:01.568-03:00  INFO 25163 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-31T16:47:01.620-03:00  INFO 25163 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+2025-08-31T16:47:01.848-03:00  INFO 25163 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-31T16:47:01.891-03:00  INFO 25163 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-31T16:47:01.919-03:00  INFO 25163 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-31T16:47:02.030-03:00  INFO 25163 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-31T16:47:02.056-03:00  INFO 25163 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-31T16:47:02.208-03:00  INFO 25163 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:empleados_test user=SA
+2025-08-31T16:47:02.210-03:00  INFO 25163 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-31T16:47:02.257-03:00  INFO 25163 --- [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-31T16:47:02.887-03:00  INFO 25163 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-31T16:47:02.935-03:00  INFO 25163 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-31T16:47:03.211-03:00  INFO 25163 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-31T16:47:03.842-03:00  WARN 25163 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-08-31T16:47:03.978-03:00  INFO 25163 --- [           main] u.t.s.DepartamentoServiceIntegrationTest : Started DepartamentoServiceIntegrationTest in 2.69 seconds (process running for 7.215)
+2025-08-31T16:47:04.069-03:00  WARN 25163 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 23505, SQLState: 23505
+2025-08-31T16:47:04.070-03:00 ERROR 25163 --- [           main] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unique index or primary key violation: "PUBLIC.CONSTRAINT_INDEX_8 ON PUBLIC.DEPARTAMENTOS(NOMBRE NULLS FIRST) VALUES ( /* 1 */ 'Unico' )"; SQL statement:
+insert into departamentos (descripcion,nombre,id) values (?,?,default) [23505-232]
 ]]></system-out>
   </testcase>
-  <testcase name="obtenerTodosLosEmpleados" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.033"/>
-  <testcase name="cuandoBuscarPorEmailExistente_entoncesRetornaEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.017"/>
-  <testcase name="actualizarEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.034"/>
-  <testcase name="buscarPorDepartamento_ok_service" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.034"/>
-  <testcase name="buscarPorId_noExiste_lanzaExcepcion" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.007"/>
-  <testcase name="eliminar_ok" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.012"/>
-  <testcase name="guardarCorrectamenteEmpleado" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.009"/>
-  <testcase name="buscarPorId_ok_service" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.007"/>
-  <testcase name="cuandoGuardarEmpleado_entoncesSePersisteCorrectamente" classname="com.um.tp5.service.EmpleadoServiceIntegrationTest" time="0.009"/>
+  <testcase name="guardarDepartamento_conRepository" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.008"/>
+  <testcase name="eliminarDepartamento" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.072"/>
+  <testcase name="cuandoBuscarPorDescripcion_retornaDepartamentoPorDescripcion" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.03"/>
+  <testcase name="buscarPorID_retornaDepartamentoPorID" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.007"/>
+  <testcase name="guardarDepartamento" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.007"/>
+  <testcase name="cuandoBuscarPorNombre_retornaDepartamentoPorNombre" classname="com.um.tp5.service.DepartamentoServiceIntegrationTest" time="0.008"/>
 </testsuite>
