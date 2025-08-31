@@ -7,4 +7,6 @@ import java.util.Optional;
 
 public interface DepartamentoRepository extends JpaRepository<Departamento, Long> {
     Optional<Departamento> findByNombre(String nombre);
+    Optional<Departamento> findByDescripcion(String descripcion);
+
 }

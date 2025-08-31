@@ -1,0 +1,6 @@
+com/um/tp5/service/ProyectoServiceIntegrationTest.class
+com/um/tp5/service/EmpleadoServiceIntegrationTest.class
+com/um/tp5/controller/EmpleadoControllerTest.class
+com/um/tp5/controller/DepartamentoControllerTest.class
+com/um/tp5/service/DepartamentoServiceIntegrationTest.class
+com/um/tp5/controller/ProyectoControllerTest.class
