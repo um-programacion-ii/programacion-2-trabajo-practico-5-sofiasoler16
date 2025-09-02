@@ -110,8 +110,8 @@ Desarrollar un sistema de gestión de empleados utilizando Spring Boot con JPA, 
 > 💡 **Nota**: Esta estimación considera la complejidad de configurar múltiples bases de datos, Docker y el aprendizaje de JPA. El tiempo incluye la configuración de profiles y la containerización de las bases de datos.
 
 ## 👨‍🎓 Información del Alumno
-- **Nombre y Apellido**: [Nombre y Apellido del Alumno]
-- **Legajo**: [Número de Legajo]
+- **Nombre y Apellido**: Sofia Soler
+- **Legajo**: 62008
 
 > ⚠️ **IMPORTANTE**: Este trabajo práctico se realiza **INDIVIDUALMENTE**. Aunque se utilizan herramientas de colaboración como Pull Requests y Code Review, estas son para mantener buenas prácticas de desarrollo y un historial ordenado. Todo el desarrollo debe ser realizado por el mismo estudiante.
 
@@ -882,6 +882,38 @@ class EmpleadoServiceIntegrationTest {
     - Explicación de por qué se usó ese prompt
     - Aprendizajes obtenidos del uso de IA
 
+## 📡 Documentación de endpoints
+
+### Empleados (`/api/empleados`)
+| Método | Ruta                                  | Descripción                         | Ejemplo                                        | 
+|-------:|---------------------------------------|-------------------------------------|------------------------------------------------|
+| GET    | `/api/empleados`                      | Listar empleados                    | curl -s http://localhost:8081/api/empleados    | 
+| GET    | `/api/empleados/{id}`                 | Obtener por ID                      | curl -s http://localhost:8081/api/empleados/1                      
+| POST   | `/api/empleados`                      | Crear empleado                      | curl -s -X POST http://localhost:8081/api/empleados -H "Content-Type: application/json" -d '{"nombre":"Ana","apellido":"Paz","email":"ana@empresa.com","fechaContratacion":"2025-08-31","salario":55000,"departamento":{"id":1}}'                    
+| PUT    | `/api/empleados/{id}`                 | Actualizar empleado                 | curl -s -X PUT http://localhost:8081/api/empleados/1 -H "Content-Type: application/json" -d '{"nombre":"Ana","apellido":"Paz","email":"ana@empresa.com","fechaContratacion":"2025-08-31","salario":60000,"departamento":{"id":1}}'                      
+| DELETE | `/api/empleados/{id}`                 | Eliminar empleado                   | curl -i -X DELETE http://localhost:8081/api/empleados/1                          
+| GET    | `/api/empleados/departamento/{nom}`   | Listar por departamento             | curl -s http://localhost:8081/api/empleados/departamento/IT                      | 
+| GET    | `/api/empleados/salario?min&max`      | Listar por rango salarial           | curl -s "http://localhost:8081/api/empleados/salario?min=1000&max=90000"  | 
+
+### Departamentos (`/api/departamentos`)
+| Método | Ruta                                   | Descripción               | Ejemplo        | 
+|-------:|----------------------------------------|---------------------------|---------------------|
+| GET    | `/api/departamentos`                   | Listar departamentos      | curl -s http://localhost:8081/api/departamentos                | 
+| GET    | `/api/departamentos/{id}`              | Obtener por ID            | curl -s http://localhost:8081/api/departamentos/1         | 
+| GET    | `/api/departamentos/nombre/{nombre}`   | Obtener por nombre        | curl -s http://localhost:8081/api/departamentos/nombre/IT           | 
+| POST   | `/api/departamentos`                   | Crear departamento        | curl -s -X POST http://localhost:8081/api/departamentos -H "Content-Type: application/json" -d '{"nombre":"IT","descripcion":"Tecnología"}'  | 
+| DELETE | `/api/departamentos/{id}`              | Eliminar departamento     | curl -i -X DELETE http://localhost:8081/api/departamentos/1             | 
+
+### Proyectos (`/api/proyectos`)
+| Método | Ruta                        | Descripción         | Ejemplo    | 
+|-------:|-----------------------------|---------------------|-----------------|-----------|
+| GET    | `/api/proyectos`           | Listar proyectos    | curl -s http://localhost:8081/api/proyectos              | 
+| GET    | `/api/proyectos/{id}`      | Obtener por ID      | curl -s http://localhost:8081/api/proyectos/1          |
+| GET    | `/api/proyectos/activos`   | Listar activos      | curl -s http://localhost:8081/api/proyectos/activos            |
+| POST   | `/api/proyectos`           | Crear proyecto      | curl -s -X POST http://localhost:8081/api/proyectos -H "Content-Type: application/json" -d '{"nombre":"App1","descripcion":"Proyecto App1","fechaInicio":"2025-08-31","fechaFin":"2025-09-07"}'  | 
+| PUT    | `/api/proyectos/{id}`      | Actualizar          | curl -s -X PUT http://localhost:8081/api/proyectos/1 -H "Content-Type: application/json" -d '{"nombre":"App1","descripcion":"Proyecto App1 (actualizado)","fechaInicio":"2025-08-31","fechaFin":"2025-09-10"}   | 
+| DELETE | `/api/proyectos/{id}`      | Eliminar            | curl -i -X DELETE http://localhost:8081/api/proyectos/1          |
+
 ## 🐳 Instrucciones para Docker
 
 ### Levantar Bases de Datos
@@ -903,6 +935,10 @@ docker compose logs -f
 
 # Con MySQL
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=mysql
+
+# ( Si no funciona primero correr:
+mysql -h 127.0.0.1 -P 3306 -u empleados_user -pempleados_pass -e "SELECT 1" empleados_db
+# )
 
 # Con PostgreSQL
 ./mvnw spring-boot:run -Dspring-boot.run.profiles=postgres
@@ -1058,6 +1094,10 @@ Cada archivo debe seguir este formato:
 ## Prompt 2: [Descripción breve]
 [Repetir estructura para cada prompt]
 ```
+
+
+
+
 
 ## 📝 Licencia
 
